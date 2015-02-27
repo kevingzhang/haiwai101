@@ -7,7 +7,6 @@ meteor-platform
 autopublish
 insecure
 accounts-password
-fourseven:scss
 iron:router
 zimme:iron-router-active
 anti:fake
@@ -19,3 +18,4 @@ meteoric:ionicons-sass
 meteoric:ionic
 meteoric:autoform-ionic
 useraccounts:ionic
+fourseven:scss
