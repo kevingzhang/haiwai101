@@ -1,15 +1,15 @@
-<template name="edit">
+<template name="add">
 {{#contentFor "headerButtonLeft"}}
     {{>ionNavBackButton path="index" text="返回"}}
   {{/contentFor}}
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">{{titleStatus}}商家信息</h1>
+    <h1 class="title">添加商家信息</h1>
   {{/contentFor}}
 
   {{#ionView}}
     {{#ionContent}}
-      {{> quickForm collection="Vendors" doc=vendorInfo id="edit-vendorinfo-form" type="update" buttonContent="提交保存"}}
+      {{> quickForm collection="Vendors" doc=this id="edit-vendorinfo-form" type="insert" buttonContent="提交保存"}}
     {{/ionContent}}
   {{/ionView}}
 </template>

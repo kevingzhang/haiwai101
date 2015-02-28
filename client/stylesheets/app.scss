@@ -1,4 +1,9 @@
-$positive: #DE4F4F;
+/**
+所有变量参见：
+https://github.com/meteoric/ionic-sass/blob/master/stylesheets/_variables.scss
+*/
+$positive: #4a87ee;
+$assertive: #ef4e3a;
 
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';

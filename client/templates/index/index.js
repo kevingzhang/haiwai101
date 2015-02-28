@@ -14,18 +14,19 @@ Template.index.helpers({
 
 Template.index.events({
    'click .js-view': function() {
-    Router.go('view');
+    Router.go('/view/'+this._id);
    },
 
    'click .js-add': function() {
     Router.go('add');
-   },
+   },//暂不清楚为什么这个event无法生效？
 
    'click .js-edit': function() {
-    Router.go('edit');
+    //console.log(this);
+    Router.go('/edit/'+this._id);
    },
 
    'click .js-del': function() {
-    Router.go('index');
+    Vendors.remove(this._id);
    },
 });

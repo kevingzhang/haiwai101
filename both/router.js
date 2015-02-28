@@ -13,13 +13,15 @@ Meteor.startup(function () {
 
 Router.map(function() {
   this.route('index', {path: '/'});
-  this.route('add');
-  this.route('edit',{
-    data: function () {
+  this.route('add',{template:'add'});
+  this.route('/edit/:_id',{template:'edit'});
+  this.route('/view/:_id',{
+    template:'view',
+    data:function(){
+      // console.log(this.params);
       return Vendors.findOne(this.params._id);
     }
   });
-  this.route('view');
 
   this.route('actionSheet');
   this.route('backdrop');

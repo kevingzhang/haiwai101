@@ -1,0 +1,37 @@
+<template name="index">
+  <!-- {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}} -->
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">海外商家</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="js-add button ion-document button-clear" onclick="Router.go('add')">新建</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+        {{#each vendorLists}}
+          {{#ionItem buttonRight=false avatar=false}}
+          <div style="float:left;">
+            <img class="js-view" src="{{image}}" width="120">
+            <h2 class="js-view">{{name}}</h2>
+            <p class="js-view">
+              {{tel}}
+            </p>
+            </div>
+            <div style="float:right;">
+            <button class="js-edit button button-positive">{{> ionIcon icon="edit"}} 修改</button>
+            <button class="js-del button button-positive">{{> ionIcon icon="trash-a"}} 删除</button>
+          </div>
+            
+          {{/ionItem}}
+        {{/each}}
+
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

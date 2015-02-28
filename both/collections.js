@@ -41,7 +41,8 @@ Vendors.attachSchema(new SimpleSchema({
     max: 200,
     autoform: {
       'label-type': 'stacked'
-    }
+    },
+    optional: true
   },
   image: {
     type: String,
@@ -49,14 +50,16 @@ Vendors.attachSchema(new SimpleSchema({
     autoform: {
       rows: 10,
       'label-type': 'stacked'
-    }
+    },
+    optional: true
   },
   website: {
     type: String,
     label: "网站地址",
     autoform: {
       'label-type': 'stacked'
-    }
+    },
+    optional: true
   },
   published: {
     type: Boolean,
@@ -65,5 +68,22 @@ Vendors.attachSchema(new SimpleSchema({
     autoform: {
       type: 'toggle'
     }
+  },
+  contacts: {
+    // label: "联系信息",
+    type: Array,
+    optional: true
+  },
+  'contacts.$': {
+    label: "联系人",
+    type: Object
+  },
+  'contacts.$.name': {
+    label: "姓名",
+    type: String
+  },
+  'contacts.$.phone': {
+    label: "电话",
+    type: String
   }
 }));
